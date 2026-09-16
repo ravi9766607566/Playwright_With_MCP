@@ -21,3 +21,12 @@ test ("TC001 - Login test with invalid credentials", async ({page}) => {
   await expect.soft(errorMessage).toBe("Bad credentials"); // Soft Assertions
   console.log ("=================== after soft assertion ===================");
 })
+
+
+test ("TC002 - Login test with invalid credentials", async ({page}) => {
+   await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+   await page.getByPlaceholder('Username').fill('Admin');
+   await page.getByPlaceholder('Password').fill('admin1234');
+   await page.getByRole('button').click();
+  await page.waitForTimeout(3000);
+})

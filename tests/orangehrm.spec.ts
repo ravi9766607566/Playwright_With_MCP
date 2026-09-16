@@ -1,12 +1,12 @@
 import {test, expect} from '@playwright/test'
-test("TC001 -Login Test", async ({page}) => {
+test("@smoke TC001 -Login Test", async ({page}) => {
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     await page.getByPlaceholder('Username').fill('Admin');
     await page.getByPlaceholder('Password').fill('admin123');
     await page.getByRole('button', { name: 'Login' }).click();
 })
 
-test ("TC002 - Login test with valid credentials", async ({page}) => {
+test ("@smoke TC002 - Login test with valid credentials", async ({page}) => {
    await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
    await page.getByPlaceholder('Username').fill('Admin');
    await page.getByPlaceholder('Password').fill('admin123');
@@ -17,7 +17,7 @@ test ("TC002 - Login test with valid credentials", async ({page}) => {
    await page.waitForURL("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
 })
 
-test ("TC003 - Login test with invalid credentials", async ({page}) => {
+test ("@regression TC003 - Login test with invalid credentials", async ({page}) => {
    await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
    await page.getByPlaceholder('Username').fill('Admin');
    await page.getByPlaceholder('Password').fill('admin1234');

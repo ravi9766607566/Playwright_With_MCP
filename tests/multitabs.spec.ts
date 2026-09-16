@@ -1,6 +1,6 @@
 import {test, expect} from 'playwright/test'
 
-test("TC001 - multitabs test", async ({browser}) => {
+test("@regression TC001 - multitabs test", async ({browser}) => {
     const context = await browser.newContext();
     const page1 = await context.newPage();
 

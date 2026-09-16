@@ -22,6 +22,10 @@ We suggest that you begin by typing:
 
     npx playwright test
 
+Catagry test
+npx playwright test --grep "@regression" --headed
+npx playwright test --grep "@smoke|@regression" --headed
+
 And check out the following files:
   - .\tests\example.spec.ts - Example end-to-end test
   - .\playwright.config.ts - Playwright Test configuration
