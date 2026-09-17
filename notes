@@ -22,6 +22,8 @@ We suggest that you begin by typing:
 
     npx playwright test
 
+npx playwright test login.spec.ts --headed --project=chromium
+
 Catagry test
 npx playwright test --grep "@regression" --headed
 npx playwright test --grep "@smoke|@regression" --headed
@@ -31,3 +33,10 @@ And check out the following files:
   - .\playwright.config.ts - Playwright Test configuration
 
 Visit https://playwright.dev/docs/intro for more information.
+
+
+Auto generate tests with Codegen.
+  npx playwright codegen
+  npx playwright codegen demo.playwright.dev/todomvc
+
+npx playwright test codegen --headed --debug
