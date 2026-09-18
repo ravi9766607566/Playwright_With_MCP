@@ -40,3 +40,27 @@ Auto generate tests with Codegen.
   npx playwright codegen demo.playwright.dev/todomvc
 
 npx playwright test codegen --headed --debug
+
+===========================================================================
+Model Context Protocol (MCP):-
+= agent and MCP server add:
+npx playwright init-agents --loop=vscode
+
+In chat we can saw 3 option after add mcp server
+1) Test Plannber
+2) Test Generator
+3) Test healer
+
+1) Select Planner and perform below:
+Generate a ./testplan/testplan.md file by covering top 3 login test cases for this application https://www.saucedemo.com/ by exploring. Make sure to follow the below template
+test name:
+test steps:
+test data:
+expected result:
+
+2) Select Generator and perform below
+Can you generate playwright test scripts in ./tests/ folder for the attached testplan.md file and execute them and give me the results
+
+3) Select healer and perform below
+getting below error, execute and fix it and rerun and give the results
+=> Paste here full error 
